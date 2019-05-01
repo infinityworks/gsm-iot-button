@@ -7,12 +7,30 @@ Ensure you have:
 - [esptool](https://github.com/espressif/esptool)
 - Relevant USB to Serial drivers
 
-## Building
-Build project:
+## Building porject
+Build project by using either command:
 
 ```
 mos build --platform esp32 --clean
 ```
 
-## Flashing 
+or
 
+```
+make
+```
+
+## Flashing Moduino
+To flash Moduino X1:
+1. Power down Moduino
+2. Connect BOOT pin to GND
+3. Power up Moduino
+4. Run command:
+
+```
+make flash
+```
+5. When terminal outputs message below power down and and power up moduino
+```
+Connecting...
+```
