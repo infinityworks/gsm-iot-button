@@ -5,9 +5,9 @@ This is a demo project that demonstrates Mongoose OS running on Moduino X1. Rath
 Ensure you have:
 - [mos](https://github.com/cesanta/mos-tool)
 - [esptool](https://github.com/espressif/esptool)
-- Relevant USB to Serial drivers
+- Relevant USB to Serial driver
 
-## Building porject
+## Building Project
 Build project by using either command:
 
 ```
@@ -33,4 +33,10 @@ make flash
 5. When terminal outputs message below power down and and power up moduino
 ```
 Connecting...
+```
+
+## Console
+To display logs from Moduino, run command
+```
+make console
 ```
