@@ -21,4 +21,4 @@ libs:
   - origin: https://github.com/mongoose-os-libs/mjs
 
 # Used by the mos tool to catch mos binaries incompatible with this file format
-manifest_version: 2019-05-01
+manifest_version: 2019-04-26
