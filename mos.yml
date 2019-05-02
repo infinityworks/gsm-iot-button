@@ -16,9 +16,30 @@ sources:
 filesystem:
   - fs
 
+config_schema:
+  - ["app", "o", {title: "App config"}]
+  - ["app.update_interval", "i", 300, {title: "Update interval in seconds"}]
+  - ["pppos.enable", true]
+  - ["pppos.uart_no", 2]
+  - ["pppos.baud_rate", 115200]
+  - ["pppos.apn", "your-carrier-apn"]
+  - ["pppos.user", "your-carrier-username"]
+  - ["pppos.pass", "your-carrier-password"]
+  - ["pppos.rx_gpio", 35]
+  - ["pppos.tx_gpio", 5]
+
 libs:
   - origin: https://github.com/mongoose-os-libs/boards
+  - origin: https://github.com/mongoose-os-libs/core
+  - origin: https://github.com/mongoose-os-libs/ca-bundle
+  - origin: https://github.com/mongoose-os-libs/rpc-service-config
+  - origin: https://github.com/mongoose-os-libs/rpc-service-fs
+  - origin: https://github.com/mongoose-os-libs/aws
+  - origin: https://github.com/mongoose-os-libs/dash
+  - origin: https://github.com/mongoose-os-libs/shadow
   - origin: https://github.com/mongoose-os-libs/mjs
+  - origin: https://github.com/mongoose-os-libs/pppos
+  - origin: https://github.com/mongoose-os-libs/rpc-uart
 
 # Used by the mos tool to catch mos binaries incompatible with this file format
 manifest_version: 2019-04-26
