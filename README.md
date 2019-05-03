@@ -82,10 +82,14 @@ In AWS Console (ensure you're in the region that the moduino was provisioned to)
 
 Subscribe to topic `<copied device ID>/button_pressed` leaving other options to default settings.
 
-Press the Mode button on the Moduino X1 and message should pop up
+Press the Mode button on the Moduino X1 and message should pop up on the AWS MQTT client
 ```
 {
     "modeBtn": "Button pressed"
 }
 ```
+The following message should also appear in the device console logs
 
+```
+Published: yes topic: <your device ID>/button_pressed message: {\"modeBtn\":\"Button pressed\"}
+```
