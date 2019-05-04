@@ -20,5 +20,11 @@ flash_device:
 	@echo "Flashed successfully"
 	@rm -rf build/extract/
 
+flash_device_win:
+	@echo "Writing to flash..."
+	esptool.py write_flash -fm dio -fs 32m -ff 80m 0x1000 build/extract/gsm-iot-button-1.0/bootloader.bin 0x8000 build/extract/gsm-iot-button-1.0/partitions_mgos.bin 0xd000 build/extract/gsm-iot-button-1.0/otadata.bin 0x10000 build/extract/gsm-iot-button-1.0/gsm-iot-button.bin 0x190000 build/extract/gsm-iot-button-1.0/fs.img
+	@echo "Flashed successfully"
+	@rmdir build\extract /s
+
 console:
 	@mos console
