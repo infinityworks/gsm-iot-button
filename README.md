@@ -1,7 +1,7 @@
 # GSM IoT Button
 IoT project demonstrating Moduino X1 running Mongoose OS that publishes a MQTT message to AWS IoT when the Mode button is pressed over a GSM connection.
 
-## Prerequisites
+## Common Prerequisites
 Ensure you have:
 - [Moduino X1](https://moduino.techbase.eu)
 - [mos](https://github.com/cesanta/mos-tool)
@@ -9,6 +9,11 @@ Ensure you have:
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) installed and [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) 
 - Relevant USB to Serial driver installed
 - APN settings for your carrier which can be commonly found on the t'internet
+
+## Windows Prerequisites
+- Ensure directory that contains mos.exe is added to your PATH system variable
+- [Chocolatey](https://chocolatey.org/install) is installed
+- [GNU Make](https://chocolatey.org/packages/make) is installed
 
 ## Configuring APN
 In `mos.yml`:
@@ -36,8 +41,17 @@ To flash Moduino X1:
 3. Power up Moduino
 4. Run command:
 
+
+**Mac/Linux Users**
 ```
 make flash
+```
+
+**Windows Users**
+```
+$ make wipe
+$ make flash_device_win
+
 ```
 5. When terminal outputs message below power down and power up moduino
 ```
