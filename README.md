@@ -48,6 +48,8 @@ make flash
 ```
 
 **Windows Users**
+
+Navigate to `build` directory and extract `fw.zip` into `extract` directory within `build`. Then run command
 ```
 $ make wipe
 $ make flash_device_win
